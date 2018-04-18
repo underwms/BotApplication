@@ -1,13 +1,11 @@
-﻿
-using Bot_Application1.Caches;
+﻿using BotApp.Caches;
 using Microsoft.Bot.Builder.Dialogs;
-using Microsoft.Bot.Builder.Internals.Fibers;
 using Microsoft.Bot.Connector;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Bot_Application1.Dialogs
+namespace BotApp.Dialogs
 {
     [Serializable]
     public class ViewActivitiesDialog : IDialog<object>
@@ -25,7 +23,6 @@ namespace Bot_Application1.Dialogs
             context.Done("");
         }
 
-        //even tho this dialog's job is just to displaying information this method is needed for the Scorable to intrupt the dialog stack
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
         {
             var message = await result;

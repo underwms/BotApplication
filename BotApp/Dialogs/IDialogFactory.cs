@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Bot_Application1.Dialogs
+namespace BotApp.Dialogs
 {
     public interface IDialogFactory
     {

@@ -1,13 +1,9 @@
 ﻿using BotAssets.Models;
-
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 
-namespace Bot_Application1.Caches
+namespace BotApp.Caches
 {
     public static class EventCache
     {

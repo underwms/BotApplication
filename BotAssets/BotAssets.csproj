@@ -94,8 +94,6 @@
     <Compile Include="Models\Event.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Participant.cs" />
-    <Compile Include="Models\SaveModels\JoinEvent.cs" />
-    <Compile Include="Models\SaveModels\EventSave.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Constants\StateKeys.cs" />
   </ItemGroup>

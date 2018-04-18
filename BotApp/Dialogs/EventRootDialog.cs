@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Bot_Application1.Caches;
-using Bot_Application1.Forms;
-using Bot_Application1.Properties;
+﻿using BotApp.Caches;
+using BotApp.Forms;
 using BotAssets;
 using BotAssets.Models;
-
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.FormFlow;
 using Microsoft.Bot.Builder.Internals.Fibers;
 using Microsoft.Bot.Connector;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Bot_Application1.Dialogs
+namespace BotApp.Dialogs
 {
     [Serializable]
     public class EventRootDialog : IDialog<object>
@@ -25,11 +23,9 @@ namespace Bot_Application1.Dialogs
             Commands.CreateEvent
         };
 
-        public EventRootDialog(IDialogFactory dialogFactory)
-        {
+        public EventRootDialog(IDialogFactory dialogFactory) =>
             SetField.NotNull(out _dialogFactory, nameof(dialogFactory), dialogFactory);
-        }
-
+        
         public async Task StartAsync(IDialogContext context)
         {
             await context.PostAsync("What do you want to do now?");
@@ -69,8 +65,7 @@ namespace Bot_Application1.Dialogs
         private async Task AfterFormComplegte(IDialogContext context, IAwaitable<EventForm> result)
         {
             var @event = await result;
-
-            //todo: test this
+            
             EventCache.AddEvent(new Event()
             {
                 EventId = EventCache.GetAllEvents().Max(x => x.EventId) + 1,

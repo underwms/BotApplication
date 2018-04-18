@@ -1,42 +1,46 @@
-﻿using Bot_Application1.Caches;
-using BotAssets;
+﻿using BotApp.Caches;
 using BotAssets.Models;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.FormFlow;
 using Microsoft.Bot.Builder.FormFlow.Advanced;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace Bot_Application1.Forms
+namespace BotApp.Forms
 {
     [Serializable]
     public class EventForm
     {
         private Int16 _branchId;
 
-        public EventForm(Int16 branchId)
-        {
+        public EventForm(Int16 branchId) =>
             _branchId = branchId;
-        }
 
         [Prompt("Please enter your {&}")]
         public string FirstName { get; set; }
+
         [Prompt("Please enter your {&}")]
         public string LastName { get; set; }
+
         [Prompt("Please enter your {&}")]
         public string Email { get; set; }
+
         [Prompt("What Activity do you want to plan?  {||}", ChoiceStyle = ChoiceStyleOptions.Buttons)]
         public List<BotAssets.Models.Activity> Activities { get; set; }
+
         [Prompt("Where do you want to have it take place?  {||}", ChoiceStyle = ChoiceStyleOptions.Buttons)]
         public List<Location> Locations { get; set; }
+
         [Prompt("When does it start?")]
         public DateTime StartDate { get; set; }
+
         [Prompt("When does it end?")]
         public DateTime EndDate { get; set; }
+
         [Prompt("What the minimum number of people you need?")]
         [Numeric(1, int.MaxValue)]
         public short ParticipantMin { get; set; }
+
         [Prompt("What the maximum number of people you need?")]
         [Numeric(2, int.MaxValue)]
         public short ParticipantMax { get; set; }
@@ -44,10 +48,8 @@ namespace Bot_Application1.Forms
         public static IForm<EventForm> BuildForm()
         {
             OnCompletionAsyncDelegate<EventForm> createEvent = async (context, state) =>
-            {
                 await context.PostAsync("Ok, I am adding the event.");
-            };
-
+            
             return new FormBuilder<EventForm>()
                 .Message("Lets create an event!")
                 .Field(nameof(FirstName))

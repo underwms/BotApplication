@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Bot_Application1.Caches;
-using Bot_Application1.Properties;
+﻿using BotApp.Caches;
+using BotApp.Properties;
 using BotAssets;
 using BotAssets.Models;
-
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Internals.Fibers;
 using Microsoft.Bot.Connector;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Bot_Application1.Dialogs
+namespace BotApp.Dialogs
 {
     [Serializable]
     public class RootDialog : IDialog<object>
     {
         private readonly IDialogFactory _dialogFactory;
 
-        public RootDialog(IDialogFactory dialogFactory)
-        {
+        public RootDialog(IDialogFactory dialogFactory) =>
             SetField.NotNull(out _dialogFactory, nameof(dialogFactory), dialogFactory);
-        }
-
+        
         public Task StartAsync(IDialogContext context)
         {
             context.Wait(MessageReceivedAsync);

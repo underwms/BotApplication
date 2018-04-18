@@ -1,6 +1,5 @@
-﻿using Bot_Application1.Caches;
+﻿using BotApp.Caches;
 using BotAssets.Models;
-
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Internals.Fibers;
 using Microsoft.Bot.Connector;
@@ -9,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Bot_Application1.Dialogs
+namespace BotApp.Dialogs
 {
     [Serializable]
     public class ViewLocationsDialog : IDialog<object>

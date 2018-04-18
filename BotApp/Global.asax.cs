@@ -1,12 +1,11 @@
-﻿using System.Threading.Tasks;
-using System.Web.Http;
-using Autofac;
-using Bot_Application1.Caches;
-using Bot_Application1.Modules;
+﻿using Autofac;
+using BotApp.Caches;
+using BotApp.Modules;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Internals.Fibers;
+using System.Web.Http;
 
-namespace Bot_Application1
+namespace BotApp
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

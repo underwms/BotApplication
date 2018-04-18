@@ -1,19 +1,17 @@
 ﻿using Autofac;
-using Bot_Application1.Caches;
-using Bot_Application1.Properties;
-
+using BotApp.Caches;
+using BotApp.Properties;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Connector;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace Bot_Application1
+namespace BotApp
 {
     [BotAuthentication]
     public class MessagesController : ApiController

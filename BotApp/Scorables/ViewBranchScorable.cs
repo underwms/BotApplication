@@ -1,14 +1,14 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using BotApp.Dialogs;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Dialogs.Internals;
 using Microsoft.Bot.Builder.Internals.Fibers;
-using Microsoft.Bot.Connector;
 using Microsoft.Bot.Builder.Scorables.Internals;
-using Bot_Application1.Dialogs;
+using Microsoft.Bot.Connector;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
-namespace Bot_Application1.Scorables
+namespace BotApp.Scorables
 {
     public class ViewBranchScorable : ScorableBase<IActivity, string, double>
     {

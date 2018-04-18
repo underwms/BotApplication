@@ -1,18 +1,16 @@
-﻿using BotAssets;
+﻿using BotApp.Caches;
+using BotAssets;
 using BotAssets.Models;
-
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Internals.Fibers;
 using Microsoft.Bot.Connector;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-using Newtonsoft.Json;
-using Bot_Application1.Caches;
-
-namespace Bot_Application1.Dialogs
+namespace BotApp.Dialogs
 {
     [Serializable]
     public class ViewEventsDialog : IDialog<object>

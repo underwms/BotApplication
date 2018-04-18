@@ -1,14 +1,12 @@
 ﻿using Autofac;
-using Bot_Application1.Dialogs;
-using Bot_Application1.Forms;
-using Bot_Application1.Scorables;
-
+using BotApp.Dialogs;
+using BotApp.Scorables;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Internals.Fibers;
 using Microsoft.Bot.Builder.Scorables;
 using Microsoft.Bot.Connector;
 
-namespace Bot_Application1.Modules
+namespace BotApp.Modules
 {
     public class GlobalMessageHandlersBotModule : Module
     {

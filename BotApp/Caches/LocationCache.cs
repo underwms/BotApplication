@@ -1,13 +1,10 @@
 ﻿using BotAssets.Models;
-
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
 
-namespace Bot_Application1.Caches
+namespace BotApp.Caches
 {
     public static class LocationCache
     {
@@ -99,10 +96,6 @@ namespace Bot_Application1.Caches
 
         public static Branch GetBranchById(Int16 branchId) =>
             Branches[branchId];
-
-        public static Branch GetBranchByCityState(string city, string state) =>
-            Branches.Values.FirstOrDefault(b => b.City.Equals(city, StringComparison.InvariantCultureIgnoreCase) &&
-                                                b.State.Equals(state, StringComparison.InvariantCultureIgnoreCase));
         
         public static IEnumerable<Branch> GetAllBranches() =>
             Branches.Values;

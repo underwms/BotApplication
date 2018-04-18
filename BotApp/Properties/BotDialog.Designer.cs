@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bot_Application1.Properties {
+namespace BotApp.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Bot_Application1.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Bot_Application1.Properties.BotDialog", typeof(BotDialog).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BotApp.Properties.BotDialog", typeof(BotDialog).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

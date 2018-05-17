@@ -40,6 +40,11 @@ namespace BotApp.Modules
                 .As<IScorable<IActivity, double>>()
                 .InstancePerLifetimeScope();
 
+            builder
+                .RegisterType<StartOverScorable>()
+                .As<IScorable<IActivity, double>>()
+                .InstancePerLifetimeScope();
+
             // Dialogs
             builder.RegisterType<ViewActivitiesDialog>()
                .InstancePerDependency();

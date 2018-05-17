@@ -11,6 +11,7 @@ namespace BotAssets
 
         public const string ViewEvents = "View Events";
         public const string CreateEvent = "Create Event";
+        public const string StartOver = "Start Over";
 
         public static List<string> AvailableCommands = new List<string>()
         {
@@ -19,7 +20,8 @@ namespace BotAssets
             ViewLocations,
             ViewActivities,
             ViewEvents,
-            CreateEvent
+            CreateEvent,
+            StartOver
         };
     }
 }
